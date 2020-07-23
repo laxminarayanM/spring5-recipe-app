@@ -1,6 +1,5 @@
 package guru.springframework.domain;
 
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 
@@ -9,19 +8,19 @@ public class Notes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private Long Id;
 
     @OneToOne
     private Recipe recipe;
+
     @Lob
     private String recipeNotes;
 
-
-    public long getId() {
+    public Long getId() {
         return Id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         Id = id;
     }
 
